@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloController {
     @GetMapping
-     public String hello(){
-         return "Hello World!!!";
-     }
+     public String hello() throws InterruptedException{
 
+        Thread.sleep(5000);
+        return "Hello world";
+     }
 }
